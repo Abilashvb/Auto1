@@ -1,0 +1,49 @@
+body {
+    background: #fff;
+}
+
+.navbar-collapse {
+    flex-direction: row-reverse;
+}
+
+.navBar {
+    border-bottom: 1px solid #EDEDED;
+}
+
+.cardView {
+    max-height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px;
+    margin-top: 20px;
+    border: 0px solid #333;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 6px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left {
+    display: inline-flex;
+    padding-right: 30px;
+}
+
+.left a {
+    display: inline-flex;
+}
+
+.left img {
+    border-radius: 6px;
+}
+
+.right {
+    min-width: calc(100% - 280px);
+    width: -webkit-fill-available;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
