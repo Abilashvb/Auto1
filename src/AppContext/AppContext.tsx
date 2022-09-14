@@ -6,12 +6,14 @@ export interface IAppContext {
     siteUrl: string;
     activeResponse: IBase;
     cars: ICar[];
+    onNextPageClick: any;
 }
 
 const AppContext = React.createContext<IAppContext>({
     siteUrl: "",
     activeResponse: {},
     cars: [],
+    onNextPageClick: undefined
 });
 
 export default AppContext;

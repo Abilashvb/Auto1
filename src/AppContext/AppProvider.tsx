@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { ICar } from "../schema/carSchema";
 import { IBase } from "../schema/commonSchema";
 import { getCarData } from "../services/carServices";
@@ -15,12 +15,17 @@ const AppProvider: React.FC<IProps> = (props) => {
     });
   }, []);
 
+  const onNextPageClick = useCallback(() => {
+    
+  }, [])
+
   return (
     <AppContext.Provider
       value={{
         siteUrl: props.siteUrl,
         activeResponse,
-        cars
+        cars,
+        onNextPageClick
       }}
     >
       {props.children}
