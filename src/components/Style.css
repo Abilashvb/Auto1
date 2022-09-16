@@ -30,6 +30,7 @@ body {
 .left {
     display: inline-flex;
     padding-right: 30px;
+    width: 100px;
 }
 
 .left a {
@@ -54,6 +55,16 @@ body {
     gap: 20px;
     padding: 24px;
 }
+
 .pagingControls span {
     cursor: pointer;
+}
+
+.carDetailsImage {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ededed;
 }

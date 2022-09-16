@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { MemoryRouter  as Router, Route, Switch } from 'react-router-dom';
+// import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from './Layout';
 import Dashboard from './Dashboard';
+import CarDetails from './carDetails/CarDetails';
 
-const Routes: React.FunctionComponent = () => (
+const AppRoutes: React.FunctionComponent = () => (
     <Router>
         <Layout>
-            <Switch>
-                <Route path="/" component={Dashboard} key="dashboard" />
-            </Switch>
+            <Routes>
+                <Route path="/details/:id" element={<CarDetails />} key="carDetails" />
+                <Route path="/" element={<Dashboard />} key="dashboard" />
+            </Routes>
         </Layout>
     </Router>
 )
 
-export default Routes;
+export default AppRoutes;

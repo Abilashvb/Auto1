@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import avatar from "../assets/logo.png";
 import './Style.css';
-import { Nav } from "react-bootstrap";
 
 const Layout: React.FunctionComponent<IProps> = (props) => {
 
@@ -15,7 +16,11 @@ const Layout: React.FunctionComponent<IProps> = (props) => {
         <div>
             <Navbar collapseOnSelect expand="lg" className="navBar">
                 <Container>
-                    <Navbar.Brand><img src={avatar} width="200px" /></Navbar.Brand>
+                    <Navbar.Brand>
+                        <Link to={`/`}>
+                            <img src={avatar} width="200px" />
+                        </Link>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
