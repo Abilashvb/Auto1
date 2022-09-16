@@ -1,28 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './Style.css';
+import AppContext from "../AppContext/AppContext";
 
 const Filter: React.FunctionComponent = (props) => {
+    const { carManufacturers, carColors, onFilterSubmit } = useContext(AppContext);
 
     return (
         <Col xs={12} md={4}>
-            <Form >
+            <Form onSubmit={onFilterSubmit}>
                 <Form.Group as={Col} md="12">
                     <Form.Label>Color</Form.Label>
-                    <Form.Select aria-label="Group" className="formControl">
-                        <option value={1}>{"All Car Colors"}</option>
-                        <option value={2}>{"Red"}</option>
-                        <option value={3}>{"Black"}</option>
+                    <Form.Select aria-label="Group" className="formControl" name="color">
+                        <option value={"all"}>{"All Car Colors"}</option>
+                        {carColors?.map(_color => <option value={_color} key={_color}>{_color}</option>)}
                     </Form.Select>
                 </Form.Group>
                 <Form.Group as={Col} md="12">
                     <Form.Label>Manufacturer</Form.Label>
-                    <Form.Select aria-label="Group" className="formControl">
-                        <option value={1}>{"All Manufacturer"}</option>
-                        <option value={2}>{"Red"}</option>
-                        <option value={3}>{"Black"}</option>
+                    <Form.Select aria-label="Group" className="formControl" name="manufacturer">
+                        <option value={"all"}>{"All Manufacturer"}</option>
+                        {carManufacturers?.map(_manufacturer =>
+                            <option key={_manufacturer.name} value={_manufacturer.name}>{_manufacturer.name}</option>)}
                     </Form.Select>
                 </Form.Group>
                 <Col>
@@ -30,6 +31,7 @@ const Filter: React.FunctionComponent = (props) => {
                         variant="secondary"
                         size="lg"
                         type="submit"
+                        name="filterSubmit"
                     >
                         Filter
                     </Button>

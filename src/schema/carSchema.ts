@@ -10,3 +10,7 @@ export interface ICar {
     mileage?: IMilage;
 }
 
+export interface ICarFilter {
+    color?: string;
+    manufacturer?: string;
+}

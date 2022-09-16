@@ -1,5 +1,6 @@
 import React from "react";
-import { ICar } from "../schema/carSchema";
+import { ICarManufacturer } from "../schema/carManufacturerSchema";
+import { ICar, ICarFilter } from "../schema/carSchema";
 import { IBase } from "../schema/commonSchema";
 
 export interface IAppContext {
@@ -11,6 +12,10 @@ export interface IAppContext {
     onPrevPageClick: any;
     onFirstPageClick: any;
     onLastPageClick: any;
+    carColors: string[];
+    carManufacturers: ICarManufacturer[];
+    onFilterSubmit: any;
+    carFilter: ICarFilter;
 }
 
 const AppContext = React.createContext<IAppContext>({
@@ -21,7 +26,11 @@ const AppContext = React.createContext<IAppContext>({
     activePageNumber: 1,
     onPrevPageClick: undefined,
     onFirstPageClick: undefined,
-    onLastPageClick: undefined
+    onLastPageClick: undefined,
+    carColors: [],
+    carManufacturers: [],
+    onFilterSubmit: undefined,
+    carFilter: {}
 });
 
 export default AppContext;
