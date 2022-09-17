@@ -7,7 +7,7 @@ import CarListing from "./CarListing";
 
 const Dashboard: React.FunctionComponent = (props) => {
     return (
-        <Container>
+        <Container className="dashboard">
             <Row>
                 <Filter />
                 <CarListing />

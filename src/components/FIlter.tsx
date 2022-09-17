@@ -10,7 +10,7 @@ const Filter: React.FunctionComponent = (props) => {
 
     return (
         <Col xs={12} md={4}>
-            <Form onSubmit={onFilterSubmit}>
+            <Form onSubmit={onFilterSubmit} className="filterForm">
                 <Form.Group as={Col} md="12">
                     <Form.Label>Color</Form.Label>
                     <Form.Select
@@ -34,10 +34,9 @@ const Filter: React.FunctionComponent = (props) => {
                 </Form.Group>
                 <Col>
                     <Button
-                        variant="secondary"
-                        size="lg"
                         type="submit"
                         name="filterSubmit"
+                        className="btn-common"
                     >
                         Filter
                     </Button>

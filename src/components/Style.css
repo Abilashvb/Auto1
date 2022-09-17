@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     background: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 18px;
 }
 
 .navbar-collapse {
@@ -8,6 +18,11 @@ body {
 
 .navBar {
     border-bottom: 1px solid #EDEDED;
+    height: 80px;
+}
+
+.dashboard {
+    padding: 12px;
 }
 
 .cardView {
@@ -74,4 +89,35 @@ body {
     height: 80px;
     padding: 24px;
     border-top: 1px solid #EDEDED;
+}
+
+.btn-common {
+    background: #ea7f28;
+    width: 128px;
+    height: 32px;
+    border-radius: 0;
+    border: none;
+}
+
+.btn:first-child:hover {
+    background-color: #D37324;
+}
+
+.filterForm {
+    border: 1px solid #EDEDED;
+    padding: 32px;
+}
+
+.filterForm div {
+    margin-bottom: 12px;
+}
+
+.filterForm div:last-child {
+    text-align: right;
+    margin: 0;
+}
+
+.form-select {
+    font-size: 14px;
+    color: #4A4A4A;
 }
