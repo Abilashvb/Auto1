@@ -5,6 +5,7 @@ import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import avatar from "../assets/logo.png";
 import './Style.css';
+import PageFooter from "./PageFooter";
 
 const Layout: React.FunctionComponent<IProps> = (props) => {
 
@@ -32,6 +33,7 @@ const Layout: React.FunctionComponent<IProps> = (props) => {
                 </Container>
             </Navbar>
             {props.children}
+            <PageFooter />
         </div>
     )
 }
