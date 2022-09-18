@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import './Style.css';
+import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
 import Filter from "./FIlter";

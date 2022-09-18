@@ -3,23 +3,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import avatar from "../assets/logo.png";
+import logo from "../assets/logo.png";
 import './Style.css';
 import PageFooter from "./PageFooter";
 
 const Layout: React.FunctionComponent<IProps> = (props) => {
-
-    useEffect(() => {
-        document.title = 'Auto 1';
-    }, []);
-
+    
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" className="navBar">
                 <Container>
                     <Navbar.Brand>
                         <Link to={`/`}>
-                            <img src={avatar} width="200px" />
+                            <img src={logo} width="200px" />
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -32,7 +28,9 @@ const Layout: React.FunctionComponent<IProps> = (props) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            {props.children}
+            <div className="mainContainer">
+                {props.children}
+            </div>
             <PageFooter />
         </div>
     )

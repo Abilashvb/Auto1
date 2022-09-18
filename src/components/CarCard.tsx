@@ -1,32 +1,30 @@
 import React from "react";
 import { ICar } from "../schema/carSchema";
 import { Link } from "react-router-dom";
-import './Style.css';
-import { Button } from "react-bootstrap";
+import Col from 'react-bootstrap/Col';
+import { Row } from "react-bootstrap";
 
 
 const CarCard: React.FunctionComponent<IProps> = ({ car }) => {
     return (
-        <div className="cardView" key={`${car?.stockNumber}`}>
-            <div className="left">
+        <Row className="cardContainer">
+            <Col xs={12} md={2} className="cardLeft">
                 <img src={`${car?.pictureUrl}`} />
-            </div>
-            <div className={`right`}>
+            </Col>
+            <Col xs={12} md={10} className="cardRight">
                 <h3>{car?.manufacturerName}</h3>
                 <div>
                     {`Stock # ${car?.stockNumber} - 
-                    ${car?.mileage?.number} ${car?.mileage?.unit} - 
-                    ${car?.fuelType} - ${car?.color}`}
+                   ${car?.mileage?.number} ${car?.mileage?.unit} - 
+                   ${car?.fuelType} - ${car?.color}`}
                 </div>
                 <div>
                     <Link to={`/details/${car?.stockNumber}`}>
-                        <Button variant="link">
-                            View details
-                        </Button>
+                        <p> View details</p>
                     </Link>
                 </div>
-            </div>
-        </div>
+            </Col>
+        </Row>
     )
 }
 

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import './Style.css';
 import AppContext from "../AppContext/AppContext";
 
 const Filter: React.FunctionComponent = (props) => {

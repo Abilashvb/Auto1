@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Col from 'react-bootstrap/Col';
-import './Style.css';
 import AppContext from "../AppContext/AppContext";
 import CarCard from "./CarCard";
 import PagingControls from "./PagingControls";
@@ -14,7 +13,9 @@ const CarListing: React.FunctionComponent = (props) => {
             <Col xs={12} md={8}>
                 <div>
                     <h3>Available cars</h3>
-                    <h5>{`Showing ${cars?.length} of ${activeResponse?.totalCarsCount} results`}</h5>
+                    {activeResponse?.totalCarsCount && (
+                        <h5>{`Showing ${cars?.length} of ${activeResponse?.totalCarsCount} results`}</h5>
+                    )}
                 </div>
                 {cars && cars
                     .map((_car, index) => <CarCard key={`car${index}`} car={_car} />)}
