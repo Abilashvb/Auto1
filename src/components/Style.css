@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: #EA7F28;
+}
+
+a :hover {
+    color: #D37324;
+    text-decoration: underline;
+}
+
+.mainContainer {
+    min-height: calc(100vh - 180px);
+}
+
+.navbar-collapse {
+    flex-direction: row-reverse;
+}
+
+.navBar {
+    border-bottom: 1.5px solid #EDEDED;
+    height: 80px;
+}
+
+.dashboard {
+    padding: 12px;
+}
+
+.pagingControls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+}
+
+.pagingControls span {
+    padding-top: 8px;
+}
+
+.carDetailsImage {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ededed;
+}
+
+.pageFooter {
+    text-align: center;
+    height: 80px;
+    padding: 24px;
+    border-top: 1.5px solid #EDEDED;
+}
+
+
+
+.btn-common {
+    background: #ea7f28;
+    width: 128px;
+    height: 32px;
+    border-radius: 0;
+    border: none;
+}
+
+.btn-common:hover {
+    background-color: #D37324 !important;
+}
+
+.filterForm {
+    border: 1.5px solid #EDEDED;
+    padding: 32px;
+}
+
+.filterForm div {
+    margin-bottom: 12px;
+}
+
+.filterForm div:last-child {
+    text-align: right;
+    margin: 0;
+}
+
+.form-select {
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+.selectItem select option:hover {
+    background-color: #D37324;
+}
+
+.cardContainer {
+    padding: 8px;
+    border: 1.5px solid #EDEDED;
+    margin-bottom: 12px;
+}
+
+.cardLeft {
+    padding: 12px;
+    background: #ededed;
+}
+
+.cardLeft img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cardRight {
+    padding: 12px;
+}
+
+.btn-link {
+    color: #EA7F28;
+}
+
+.btn-link:hover {
+    color: #D37324 !important;
+}
+
+.btn:disabled {
+    color: #4A4A4A;
+}
+
+.btn {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+.carDetailsLeft {
+    padding: 24px;
+}
+
+.carDetailsRight {
+    padding: 24px;
+}
+
+.favBox {
+    border: 1.5px solid #EDEDED;
+    padding: 24px;
+}
+
+.favBox div {
+    text-align: right;
+}
+
+.nav-link {
+    color: #4A4A4A;
+}
+
+.notFound {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 180px);
+    flex-direction: column;
+}
